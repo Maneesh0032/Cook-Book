@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form method="post" action="" enctype="multipart/form-data" onsubmit="return checkform(this);">
+    <p><span style="width:180px">Username: </span><input type="text" name="username" id='un'></p>
+    <p><span style="width:180px">Password: </span><input type="password" name="password" id='pw'></p>
+    <input type="submit" value="SUBMIT" />
+    </form>
+</body>
+<script type='text/javascript'>
+  function checkform(){
+      if(document.getElementById("un").value == 'qwer' && document.getElementById("pw").value == 'asdf' ){
+          
+        window.location="https://www.google.com/";
+        alert("Login Successful");
+         
+      }else{
+          alert("Access denied. Valid username and password is required.");
+      }
+  }
+  </script>
+</html>

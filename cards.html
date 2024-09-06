@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+ <head>
+    <title>cards</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700;800&family=Poppins:wght@600&family=Roboto&display=swap');
+
+        body {
+            font-family: montserrat;
+            background-image: url('https://cdn.pixabay.com/photo/2017/10/22/21/02/food-2879265_1280.jpg');
+            background-size: cover;
+            height: 130vh;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 80px;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            border-radius: 45%;
+            padding-left: 1cm;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .button {
+            background-color: rgb(149, 170, 52);
+            padding: 30px;
+            color: antiquewhite;
+
+        }
+
+        .flip-card-back {
+            background-color: rgba(17, 148, 184, 0.96);
+            color: rgb(255, 255, 255);
+            display: flex;
+            font-size: 20px;
+            text-shadow: 2px 2px 4px rgb(20, 20, 20);
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transform: rotateY(180deg);
+        }
+
+        .flip-card1 {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            padding-left: 1cm;
+        }
+
+        .flip-card-inner1 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card1:hover .flip-card-inner1 {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front1,
+        .flip-card-back1 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front1 {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .flip-card-back1 {
+            background-color: rgba(17, 148, 184, 0.96);
+            color: white;
+            transform: rotateY(180deg);
+            font-size: medium;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-shadow: 2px 2px 4px rgb(15, 15, 15);
+            text-align: center;
+        }
+
+        .flip-card2 {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            padding-left: 1cm;
+        }
+
+        .flip-card-inner2 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card2:hover .flip-card-inner2 {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front2,
+        .flip-card-back2 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front2 {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .button {
+            background-color: rgb(149, 170, 52);
+            padding: 30px;
+            color: antiquewhite;
+
+        }
+
+        .flip-card-back2 {
+            background-color: rgba(17, 148, 184, 0.96);
+            color: black;
+            align-items: center;
+
+            transform: rotateY(180deg);
+
+
+        }
+
+        .flip-card3 {
+            background-color: transparent;
+            width: 300px;
+            height: 300px;
+            perspective: 1000px;
+            padding-left: 1cm;
+        }
+
+        .flip-card-inner3 {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card3:hover .flip-card-inner3 {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front3,
+        .flip-card-back3 {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-front3 {
+            background-color: #bbb;
+            color: black;
+        }
+
+        .button {
+            background-color: rgb(149, 170, 52);
+            padding: 30px;
+            color: antiquewhite;
+
+        }
+
+        .flip-card-back3 {
+            background-color: rgba(17, 148, 184, 0.96);
+            color: rgb(255, 255, 255);
+            align-items: center;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-shadow: 2px 2px 4px rgb(18, 17, 17);
+
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+            top: 20px;
+            left: 20px;
+        }
+
+        .buttons button {
+            width: 150px;
+            height: 50px;
+            background-color: white;
+            margin: 20px;
+            color: #568fa6;
+            position: relative;
+            overflow: hidden;
+            font-size: 14px;
+            letter-spacing: 1px;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 3px;
+        }
+
+        .buttons button:before,
+        .buttons button:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #44d8a4;
+            transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+        }
+
+        .buttons button:before {
+            right: 0;
+            top: 0;
+            transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+        }
+
+        .buttons button:after {
+            left: 0;
+            bottom: 0;
+        }
+
+        .buttons button span {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 0;
+            padding: 0;
+            z-index: 1;
+        }
+
+        .buttons button span:before,
+        .buttons button span:after {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 0;
+            background-color: #44d8a4;
+            transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
+        }
+
+        .buttons button span:before {
+            right: 0;
+            top: 0;
+            transition: all 0.5s cubic-bezier(0.35, 0.1, 0.25, 1);
+        }
+
+        .buttons button span:after {
+            left: 0;
+            bottom: 0;
+        }
+
+        .buttons button p {
+            padding: 0;
+            margin: 0;
+            transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .buttons button p:before,
+        .buttons button p:after {
+            position: absolute;
+            width: 100%;
+            transition: all 0.4s cubic-bezier(0.35, 0.1, 0.25, 1);
+            z-index: 1;
+            left: 0;
+        }
+
+        .buttons button p:before {
+            content: attr(data-title);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .buttons button p:after {
+            content: attr(data-text);
+            top: 150%;
+            color: #44d8a4;
+        }
+
+        .buttons button:hover:before,
+        .buttons button:hover:after {
+            width: 100%;
+        }
+
+        .buttons button:hover span {
+            z-index: 1;
+        }
+
+        .buttons button:hover span:before,
+        .buttons button:hover span:after {
+            height: 100%;
+        }
+
+        .buttons button:hover p:before {
+            top: -50%;
+            transform: rotate(5deg);
+        }
+
+        .buttons button:hover p:after {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .buttons button.start {
+            background-color: #44d8a4;
+            box-shadow: 0px 5px 10px -10px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .buttons button.start p:before {
+            top: -50%;
+            transform: rotate(5deg);
+        }
+
+        .buttons button.start p:after {
+            color: white;
+            transition: all 0s ease;
+            content: attr(data-start);
+            top: 50%;
+            transform: translateY(-50%);
+            animation: start 0.3s ease;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes start {
+            from {
+                top: -50%;
+            }
+        }
+
+        .buttons button.start:hover:before,
+        .buttons button.start:hover:after {
+            display: none;
+        }
+
+        .buttons button.start:hover span {
+            display: none;
+        }
+
+        .buttons button:active {
+            outline: none;
+            border: none;
+        }
+
+        .buttons button:focus {
+            outline: 0;
+        }
+        
+      nav{
+          display: flex;
+          justify-content: space-between;
+          padding: 20px 80px;
+          position: sticky;
+          top: 0;
+          background-color: rgba(0, 0, 0, 0.925);
+          z-index: 99999;
+      }
+      nav p{
+          font-size: 19px;
+          color: white;
+      }
+      nav ul{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          list-style: none;
+          gap: 30px;
+      }
+      nav ul li a{
+          text-decoration: none;
+          color: rgb(255, 255, 255);
+          font-size: 16px;
+          transition: all 0.5s;
+      }
+      nav ul li a:hover{
+          text-decoration: underline;
+          color: rgb(0, 195, 255);
+      }
+    </style>
+  </head>
+
+ <body>
+    <nav>
+     <img src="logo.png" style="height: 40px; width: 100px; cursor: pointer;">
+      <ul>
+       <li><a href="">HOME</a></li>
+       <li><a href="">TEAM</a></li>
+     </ul>
+   </nav>
+     <h1 style="font-size: 50px ; color: #77ff00; text-align: center; text-shadow: 2px 2px 5px rgb(31, 28, 28);">
+        ..RECIPES..
+      </h1>
+    <hr style="margin: 40px; border: 1px solid rgba(50, 48, 48, 0.838);">
+    <br>
+    <div class="cards">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://cdn.pixabay.com/photo/2017/05/08/23/12/linguini-bongole-2296837_1280.jpg"
+                        style="width:350px;height:300px;">
+                    <p style="font-size: 30px; font-weight: 500;">Spaghetti</p>
+                </div>
+                <div class="flip-card-back">
+                    <b>
+                        <h2>Spaghetti...</h2>
+                    </b>
+                    <div class="buttons">
+                        <button class="btn" formaction="r1.html"><span></span>
+                            <p data-start="" data-text="lets make it.." data-title="Recipe"></p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="https://cdn.pixabay.com/photo/2021/01/10/04/37/salad-5904093_640.jpg"
+                        style="width:350px;height:300px;">
+                    <p style="font-size: 30px; font-weight: 500;">Salad</p>
+                </div>
+                <div class="flip-card-back">
+                    <b>
+                        <h2>Salad...</h2>
+                    </b>
+                    <a href="recipie.html">
+                        <div class="buttons">
+                            <button class="btn"><span></span>
+                                <p data-start="" data-text="lets make it.." data-title="Recipe"></p>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="flip-card1">
+            <div class="flip-card-inner1">
+                <div class="flip-card-front1">
+                    <img src="https://images.immediate.co.uk/production/volatile/sites/30/2021/04/Pasta-alla-vodka-f1d2e1c.jpg"
+                        style="width:350px;height:300px; margin-left: -50px;">
+                    <p style="font-size: 30px; font-weight: 500;">Pasta</p>
+                </div>
+                <div class="flip-card-back1">
+                    <b>
+                        <h1>Pasta..</h1>
+                    </b>
+                    <div class="buttons">
+                        <button class="btn"><span></span>
+                            <p data-start="" data-text="lets make it.." data-title="Recipe"></p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card1" style="margin: 20px;">
+            <div class="flip-card-inner1">
+                <div class="flip-card-front1">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0e/94/0a/7c/yaaayyyy.jpg"
+                        style="width:350px;height:300px;">
+                    <p style="font-size: 30px;  font-weight: 500;">Pizza</p>
+                </div>
+                <div class="flip-card-back1">
+                    <b>
+                        <h1>Pizza...</h1>
+                    </b>
+                    <div class="buttons">
+                        <button class="btn"><span></span>
+                            <p data-start="" data-text="lets make it.." data-title="Recipe"></p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+           <div class="flip-card3" style="margin: 20px;">
+             <div class="flip-card-inner3">
+                <div class="flip-card-front3">
+                    <img src="https://cdn.britannica.com/38/230838-050-D0173E79/doughnuts-donuts.jpg"
+                        style="width:350px;height:300px;">
+                    <p style="font-size: 30px; font-weight: 500;">Donuts</p>
+                </div>
+                <div class="flip-card-back3">
+                    <b>
+                        <h1>Donuts..</h1>
+                    </b>
+                    <div class="buttons">
+                        <button class="btn"><span></span>
+                            <p data-start="" data-text="lets make it.." data-title="Recipe"></p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+
+</html>
